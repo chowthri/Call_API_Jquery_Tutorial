@@ -1,0 +1,23 @@
+<script>
+    $(document).ready(function(){
+        // Example Id value
+        var idValue = 123; // Replace this with your actual Id value
+
+        $.ajax({
+            type: "POST",
+            url: "your-endpoint.aspx", // Replace with your actual ASPX endpoint URL
+            data: JSON.stringify({ Id: idValue }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function(response) {
+                // Handle the success response here
+                console.log("Success:", response);
+            },
+            error: function(xhr, status, error) {
+                // Handle any errors here
+                console.log("Error:", error);
+            }
+        });
+    });
+</script>
+
